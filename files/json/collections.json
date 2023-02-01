@@ -91,8 +91,49 @@
 			"category": 3,
 			"url": "https://google.com"
 		}
+		,
+		{
+			"id": 10,
+			"title": "Way Kambas Limited Edition",
+			"image": "img/collections/featured/03.png",
+			"price": {
+				"value": "1.050.000"
+			},
+			"category": 3,
+			"url": "https://google.com"
+		}
+		,
+		{
+			"id": 11,
+			"title": "Way Kambas Limited Edition",
+			"image": "img/collections/featured/03.png",
+			"price": {
+				"value": "1.050.000"
+			},
+			"category": 1,
+			"url": "https://google.com"
+		}
+		,
+		{
+			"id": 12,
+			"title": "Way Kambas Limited Edition",
+			"image": "img/collections/featured/03.png",
+			"price": {
+				"value": "1.050.000"
+			},
+			"category": 2,
+			"url": "https://google.com"
+		}
+		,
+		{
+			"id": 13,
+			"title": "Way Kambas Limited Edition",
+			"image": "img/collections/featured/03.png",
+			"price": {
+				"value": "1.050.000"
+			},
+			"category": 3,
+			"url": "https://google.com"
+		}
 	]
 }
-
-
-

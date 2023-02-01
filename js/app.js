@@ -3892,6 +3892,21 @@
             },
             on: {}
         });
+        if (document.querySelector(".testimonials__slider")) new core(".testimonials__slider", {
+            modules: [ Navigation ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            spaceBetween: 15,
+            autoHeight: true,
+            speed: 800,
+            loop: true,
+            navigation: {
+                prevEl: "testimonials__arrow--left",
+                nextEl: "testimonials__arrow--right"
+            },
+            on: {}
+        });
     }
     window.addEventListener("load", (function(e) {
         initSliders();
@@ -5815,7 +5830,7 @@ PERFORMANCE OF THIS SOFTWARE.
         categoriesElements = document.querySelectorAll(".collections__column");
         if (collectionsElement) loadProducts();
     }
-    async function loadProducts(start = 0, limit = 3) {
+    async function loadProducts(start = 0, limit = 9) {
         const productsJson = "files/json/collections.json";
         const response = await fetch(productsJson, {
             metod: "GET"
@@ -5843,6 +5858,19 @@ PERFORMANCE OF THIS SOFTWARE.
                 collectionsItems.insertAdjacentHTML("beforeend", productTemplate);
             }
         }));
+    }
+    document.addEventListener("click", documentActions);
+    function documentActions(e) {
+        const targetElement = e.target;
+        if (targetElement.closest(".footer-collections__button")) {
+            const productsQuantity = document.querySelectorAll(".collections__item").length;
+            loadProducts(productsQuantity);
+            e.preventDefault();
+        }
+        if (targetElement.closest(".body-product__add-to-cart")) {
+            addToCart();
+            e.preventDefault();
+        }
     }
     window["FLS"] = true;
     isWebp();
